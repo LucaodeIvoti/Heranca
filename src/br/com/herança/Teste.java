@@ -10,14 +10,14 @@ public class Teste {
 	public void testSenhaTrue() {
 		Gerente gerente = new Gerente();
 		gerente.Senha(5555);
-		assertEquals(gerente.autentica(5555), true);
+		assertTrue(gerente.autentica(5555));
 	}
 
 	@Test
 	public void testSenhaFalse() {
 		Gerente gerente = new Gerente();
 		gerente.Senha(5555);
-		assertEquals(gerente.autentica(4545), false);
+		assertFalse(gerente.autentica(4545));
 	}
 
 	@Test
@@ -34,5 +34,6 @@ public class Teste {
 		assertEquals(funcionario.GetNome(), "Irma");
 
 	}
+	
 
 }
